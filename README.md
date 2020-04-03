@@ -1,8 +1,3 @@
-[![npm][npm]][npm-url]
-[![node][node]][node-url]
-[![deps][deps]][deps-url]
-[![size][size]][size-url]
-
 # asset-webpack-plugin
 a webpack plugin to generate webpack assets into a json
 
@@ -35,7 +30,7 @@ name | `string` | 'assets.json' |  | the file name generated in output
 
 assets json list all assets in output directory, like below:
 
-```json
+```javascript
 [
 '/static/images/banner-bg.png'
 ,'/static/images/banner-detail-arc.png'
@@ -50,4 +45,6 @@ assets json list all assets in output directory, like below:
 ,'index.html'
 ]
 ```
+
+
 
