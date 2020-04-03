@@ -1,11 +1,11 @@
 # asset-webpack-plugin
 a webpack plugin to generate webpack assets into a json
 
-## Install
+<!-- ## Install
 
 ```bash
 npm i asset-webpack-plugin -D
-```
+``` -->
 
 ## Usage
 
