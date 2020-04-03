@@ -1,7 +1,13 @@
-const fileName = 'assets.json';
+let defaultOptions = {
+    name: 'assets.json'
+}
 
-class MyPlugin {
+class AssetWebpackPlugin {
+	constructor(options){
+		this.options = options;
+	}
 	apply(compiler) {
+		let self = this;
 		compiler.plugin("emit", function(compilation, callback) {
 			let assets = [];
 			Object.keys(compilation.assets).forEach(assetName => {
@@ -11,12 +17,13 @@ class MyPlugin {
 			Object.keys(compilation.options.entry).forEach(entry => {
 				assets.push(entry + '.html');
 			})
-
-			assets.push(fileName);
+            
+            let options = Object.assign({},defaultOptions,self.options);
+			assets.push(options.name);
 			 
 			assets = assets.map(item => "'" + item + "'");
 			
-			compilation.assets[fileName] = {
+			compilation.assets[options.name] = {
 				source() {
 				  return '[\r\n' + assets.join('\r\n,') + '\r\n]';
 				},
@@ -30,4 +37,4 @@ class MyPlugin {
 	}
 }
 
-module.exports = MyPlugin;
+module.exports = AssetWebpackPlugin;
