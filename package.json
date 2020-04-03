@@ -1,0 +1,26 @@
+{
+  "name": "asset-webpack-plugin",
+  "version": "0.0.1",
+  "description": "a webpack plugin to generate assets into a json",
+  "main": "index.js",
+  "scripts": {
+    
+  },
+  "engines": {
+    "node": ">= 8.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ygtzz/asset-webpack-plugin.git"
+  },
+  "keywords": [
+    "webpack",
+    "assets"
+  ],
+  "author": "ygtzz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ygtzz/asset-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/ygtzz/asset-webpack-plugin#readme"
+}
